@@ -90,7 +90,7 @@
 </nav>
 <main class={isGrid ? gridClass : listClass}>
 	{#each data as item}
-		{#if isGrid}<Card {...item} />{:else}<ListCard {...item} />{/if}
+		{#if isGrid}<Card product={item} />{:else}<ListCard product={item} />{/if}
 	{/each}
 	{#if isGrid}<SkeletonCard />{:else}<SkeletonListCard />{/if}
 </main>

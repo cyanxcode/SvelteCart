@@ -20,6 +20,7 @@
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@tailwindcss/vite": "^4.0.9",
+		"@types/canvas-confetti": "^1.9.0",
 		"autoprefixer": "^10.4.20",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
@@ -37,6 +38,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"canvas-confetti": "^1.9.3",
 		"iconify-icon": "^2.3.0"
 	}
 }
