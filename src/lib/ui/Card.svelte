@@ -13,10 +13,10 @@
 		/>
 		<img src={image[1]} alt={name} class="absolute top-0 aspect-square w-full object-cover" />
 	</div>
-	<div class="flex justify-between">
+	<div class="md:text-md flex justify-between text-sm">
 		<div class="w-full text-base/3">
 			<div class="flex w-full items-center justify-between">
-				<h2 class="text-lg font-semibold">{name}</h2>
+				<h2 class="text-md font-semibold md:text-lg">{name}</h2>
 				{#if false}
 					<iconify-icon icon="mdi:heart-outline" class="text-2xl"></iconify-icon>
 				{:else}
