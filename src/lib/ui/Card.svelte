@@ -25,6 +25,7 @@
 				<h2 class="text-md font-semibold md:text-lg">{product.name}</h2>
 				<AddToWishlist {product} />
 			</div>
+			<h2 class="sm:text-md text-sm text-zinc-600 dark:text-zinc-300">T Shirt</h2>
 			<div class="text-md mt-1 flex gap-2">
 				<p class="text-zinc-600 line-through dark:text-zinc-300">${product.price + 10}</p>
 				<p class="font-semibold">${product.price}</p>

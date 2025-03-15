@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { isCartOpen } from '../index';
+	import { wishlist } from '$lib/stores/wishlist';
+	import Card from './Card.svelte';
 
 	let startY = 0;
 
@@ -26,7 +28,18 @@
 		<div class="text-3xl">Wishlist</div>
 		<button onclick={() => ($isCartOpen = false)} class="w-20">Go Back</button>
 	</nav>
-	<section class="-mt-20 grid h-full w-full place-content-center">
-		<p class="text-lg">Your wishlist is empty.</p>
-	</section>
+	{#if $wishlist.length > 0}
+		<main class="grid grid-cols-2 gap-1 p-2 lg:grid-cols-4 lg:p-6">
+			{#each $wishlist as product (product.id)}
+				<Card {product} />
+			{/each}
+		</main>
+		<section class="grid h-full w-full place-content-center">
+			<button class="bg-primary rounded-md p-2 text-white">Checkout</button>
+		</section>
+	{:else}
+		<section class="-mt-20 grid h-full w-full place-content-center">
+			<p class="text-lg">Your wishlist is empty.</p>
+		</section>
+	{/if}
 </main>
